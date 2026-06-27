@@ -107,7 +107,7 @@ async function scanWithGemini(base64, mediaType, mode) {
     ? `收據辨識食材與調味料，只回傳純JSON無markdown：${schema} 食材天數:${days} 調味料效期:${cond}`
     : `照片辨識食材與調味料，只回傳純JSON無markdown：${schema} 食材天數:${days}`;
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
